@@ -309,3 +309,62 @@ h1, h2, h3, p { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Blue accent pass: keep the warm paper and forest palette, with clearer blue signals. */
+:root {
+  --blue: #2e63ad;
+  --blue-deep: #204b87;
+  --blue-pale: #e8effa;
+  --blue-line: #cfdcf0;
+  --blue-wash: #f1f5fb;
+}
+
+button:focus-visible, a:focus-visible { outline-color: #477bc2; }
+::selection { background: #dce8f8; color: #204b87; }
+.nav-links > a:hover { color: var(--blue); }
+.nav-links .nav-contact { background: var(--blue); box-shadow: 0 7px 16px rgba(46, 99, 173, .12); }
+.nav-links .nav-contact:hover { background: var(--blue-deep); }
+.hero h1 em, .contact-copy h2 em { color: var(--blue); }
+.button-primary { background: var(--blue); border-color: var(--blue); box-shadow: 0 8px 17px rgba(46, 99, 173, .16); }
+.button-primary:hover { background: var(--blue-deep); border-color: var(--blue-deep); box-shadow: 0 12px 22px rgba(46, 99, 173, .2); }
+.button-secondary { color: var(--blue-deep); border-color: #c7d6e9; }
+.button-secondary:hover { background: var(--blue-pale); border-color: #b8cbe5; }
+.button-linkedin { background: var(--blue-pale); border-color: var(--blue-line); color: var(--blue-deep); }
+.eyebrow { color: var(--blue-deep); }
+.eyebrow-dot { background: #4b83cb; box-shadow: 0 0 0 4px #e5eefb; }
+.section-index { color: var(--blue); }
+.focus-icon-blue { color: var(--blue-deep); background: var(--blue-pale); }
+.hero-decoration { border-color: rgba(46, 99, 173, .14); }
+.hero-card::after { border-color: rgba(46, 99, 173, .13); }
+.project-card:hover { border-color: #bdcfe9; box-shadow: 0 15px 35px rgba(46, 78, 124, .09); }
+.project-open { background: var(--blue-pale); color: var(--blue-deep); }
+.project-card:hover .project-open { background: var(--blue); }
+.project-category { color: var(--blue-deep); }
+.project-card-bottom { color: var(--blue-deep); }
+.tag-row span { color: #365b8c; background: #f0f4fb; border-color: #e1e9f5; }
+.skill-card { border-top: 3px solid #dce6f4; }
+.skill-card:nth-child(1) { border-top-color: #a9c5e8; }
+.skill-card:nth-child(2) { border-top-color: #e9cba8; }
+.skill-card:nth-child(3) { border-top-color: #9ebee8; }
+.skill-card:nth-child(4) { border-top-color: #b5d4be; }
+.skill-card:nth-child(5) { border-top-color: #b8c9ee; }
+.skill-card:nth-child(6) { border-top-color: #c4d9d2; }
+.skill-card:nth-child(3) .skill-icon { color: var(--blue-deep); background: var(--blue-pale); }
+.skill-card:nth-child(4) .skill-icon { color: #285c9c; background: #e5eefb; }
+.skill-card:nth-child(5) .skill-icon { color: #9a6837; background: #f5e9d9; }
+.skill-card:nth-child(6) .skill-icon { color: #587b75; background: #e5efeb; }
+.skill-card li svg { color: var(--blue); }
+.education-icon { color: #d7e5fb; }
+.contact-section { background: #eaf0f8; border-top-color: #d7e2f0; }
+.contact-card-mark { color: var(--blue-deep); background: var(--blue-pale); }
+.available-pill { background: #edf4ea; }
+.contact-detail svg { color: var(--blue); }
+.contact-card-note { background: #f1f5fb; }
+.back-top { color: var(--blue-deep); }
+.back-top:hover { color: var(--forest); }
+.modal-close { border-color: #d3e0f0; background: var(--blue-pale); color: var(--blue-deep); }
+.modal-takeaway { background: #eef4fc; color: var(--blue-deep); }
+
+@media (max-width: 760px) {
+  .nav-links > a:hover { background: #eff4fb; }
+}

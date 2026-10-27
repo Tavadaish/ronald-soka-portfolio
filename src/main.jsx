@@ -53,7 +53,7 @@ function App() {
   const [activeProject, setActiveProject] = useState(null)
   const [menuOpen, setMenuOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  const email = 'YOUR_EMAIL@example.com'
+  const email = 'sokatavadaishe@gmail.com'
   const nav = [['About', '#about'], ['Projects', '#projects'], ['Skills', '#skills'], ['Credentials', '#credentials']]
   const closeMenu = () => setMenuOpen(false)
   const copyEmail = async () => {

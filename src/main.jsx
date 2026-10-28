@@ -10,47 +10,87 @@ import './styles.css'
 
 const projects = [
   {
-    number: '01', category: 'NETWORK SECURITY', title: 'Making partner connections safer',
-    summary: 'A secure connection pattern designed to let a partner reach only the services they actually need.',
-    tags: ['Cisco ASA', 'IPsec VPN', 'Access control'],
-    challenge: 'A partner needed to exchange files with selected internal services without receiving broad access to the wider network.',
-    approach: 'Defined the smallest required traffic scope, reviewed the VPN security parameters, and mapped out a validation plan for both access and connectivity.',
-    outcome: 'A reusable design approach centred on least privilege, clear access rules, and testing that confirms what is allowed—and what is not.',
-    takeaway: 'Security should enable the right work while keeping unrelated systems out of reach.',
-    note: 'Sanitised case study. Network addresses, peer details, credentials, and production configurations are intentionally omitted.'
+    number: '01', category: 'ENTERPRISE NETWORKING', title: 'Bringing branch offices closer to headquarters',
+    summary: 'Connecting branch locations to central services so teams can work across sites with dependable access.',
+    tags: ['Branch connectivity', 'Routing', 'LAN / WAN', 'Troubleshooting'],
+    challenge: 'Teams in branch locations need secure, reliable access to services and resources hosted at headquarters, even when sites have different local conditions.',
+    approach: 'Support the end-to-end site connectivity path: understand the required services, check routing and reachability, confirm the relevant access controls, and validate connectivity from the branch to the central destination.',
+    outcome: 'A more consistent approach to extending enterprise connectivity beyond the main office, with attention to service reachability and the boundaries between sites.',
+    takeaway: 'A site link is only useful when the people and applications that depend on it can reliably reach what they need.',
+    note: 'Sanitised case study. Branch names, addressing, network diagrams, service identifiers, and production configurations are omitted.'
   },
   {
-    number: '02', category: 'TROUBLESHOOTING', title: 'Restoring a reliable internet path',
-    summary: 'A structured investigation into an application that could not reach the internet through its expected connection.',
-    tags: ['Routing', 'Firewall policy', 'NAT'],
-    challenge: 'A service in a segmented network was unable to reach an external destination through its expected upstream path, although an alternate path was available.',
-    approach: 'Separated the problem into link health, route selection, address translation, firewall policy, and return-path checks before identifying a narrowly scoped change.',
-    outcome: 'A controlled troubleshooting method designed to restore the required access while limiting the risk of disrupting other services.',
-    takeaway: 'Good incident response is deliberate: isolate the cause, change only what is necessary, then verify the result.',
-    note: 'Generalised from operational troubleshooting. No live topology, service names, or sensitive network identifiers are included.'
+    number: '02', category: 'NETWORK SECURITY', title: 'Connecting international sites with Sophos RED',
+    summary: 'Using Sophos Remote Ethernet Devices to extend managed headquarters connectivity to remote international offices.',
+    tags: ['Sophos RED', 'Sophos Firewall', 'Remote sites', 'Secure connectivity'],
+    challenge: 'International offices need a dependable path to approved central services without losing visibility and control over how remote sites connect.',
+    approach: 'Work through remote-device provisioning, central firewall integration, routing, access policy, and end-to-end checks to confirm that required services are reachable and unrelated network access remains appropriately limited.',
+    outcome: 'A repeatable remote-site connectivity pattern built around central management, clear access boundaries, and validation from the remote location.',
+    takeaway: 'Remote connectivity works best when the user experience is simple and the security controls remain deliberate.',
+    note: 'Sanitised case study. Country names, site identities, public IPs, device serials, firewall rules, and tunnel details are intentionally excluded.'
   },
   {
-    number: '03', category: 'DATA-CENTRE INFRASTRUCTURE', title: 'Planning an infrastructure refresh',
-    summary: 'A phased approach to infrastructure change that puts service continuity and rollback readiness first.',
-    tags: ['Core switching', 'Migration planning', 'Availability'],
-    challenge: 'Physical infrastructure changes and modernisation can affect multiple dependent services if work is treated as one large cutover.',
-    approach: 'Organised the work around discovery, dependencies, change windows, migration waves, validation, rollback plans, and post-change monitoring.',
-    outcome: 'A staged delivery framework with clearer checkpoints, ownership, and recovery considerations for each phase.',
-    takeaway: 'The safest migration is one where teams understand dependencies and know how to recover before the change begins.',
-    note: 'Planning case study. Site diagrams, rack layouts, system names, and restricted infrastructure details are excluded.'
+    number: '03', category: 'DATA-CENTRE INFRASTRUCTURE', title: 'Relocating core network equipment to a new data-centre site',
+    summary: 'Moving critical core network equipment with careful attention to dependencies, reconnection, and service validation.',
+    tags: ['Core network', 'Data-centre migration', 'Change planning', 'Service validation'],
+    challenge: 'Relocating core equipment affects the connectivity paths that many downstream systems rely on, so the move needs coordinated sequencing and clear recovery options.',
+    approach: 'Treat the relocation as a controlled change: identify dependencies, coordinate disconnection and reconnection activities, verify physical and logical links, test core reachability and dependent services, and retain a clear escalation and rollback plan where applicable.',
+    outcome: 'A migration approach focused on restoring core connectivity methodically and checking dependent services instead of treating equipment relocation as a purely physical task.',
+    takeaway: 'A data-centre move is successful when the services behind the equipment are verified—not just when the hardware is in its new location.',
+    note: 'Sanitised case study. No site layout, rack elevation, hardware placement, management addresses, or detailed topology is published.'
   },
   {
-    number: '04', category: 'IT OPERATIONS', title: 'Making incident response more consistent',
-    summary: 'A repeatable way to investigate network issues, keep useful records, and make handovers easier.',
-    tags: ['Monitoring', 'Incident response', 'Documentation'],
-    challenge: 'When essential services depend on network connectivity, teams need to locate faults quickly and communicate findings clearly.',
-    approach: 'Use a layered checklist across device health, interfaces, routing, reachability, latency, security policies, and service-level checks—then document what changed and what was confirmed.',
-    outcome: 'A consistent approach to fault isolation, escalation, and handover that helps the next engineer pick up the story without starting from scratch.',
-    takeaway: 'Clear operational notes are part of the fix, not paperwork after the fix.',
-    note: 'Illustrative operational case study. Internal logs, customer details, and identifiable service information are not published.'
+    number: '04', category: 'NETWORK SECURITY', title: 'Making partner connections safer',
+    summary: 'A site-to-site VPN pattern designed to let a partner reach only the approved internal services it needs.',
+    tags: ['Cisco ASA', 'IPsec VPN', 'Access control', 'Least privilege'],
+    challenge: 'A partner needed to exchange files with selected internal services without receiving broad access to the wider data-centre network.',
+    approach: 'Define the narrowest required traffic scope, review VPN security parameters, align routing and firewall rules, and validate both permitted and prohibited access paths.',
+    outcome: 'A reusable implementation and validation approach centred on least privilege, explicit access rules, and evidence that the approved service path works as intended.',
+    takeaway: 'A secure connection should enable the right work without opening unrelated systems.',
+    note: 'Sanitised case study. Partner identity, server addresses, peer details, credentials, and production configurations are intentionally omitted.'
   },
   {
-    number: '05', category: 'SOFTWARE & BUSINESS SYSTEMS', title: 'Simplifying everyday sales and stock work',
+    number: '05', category: 'INCIDENT RESPONSE', title: 'Restoring a reliable internet path for a segmented service',
+    summary: 'Investigating why a DMZ-hosted service could not use its expected internet connection while an alternative route was available.',
+    tags: ['DMZ', 'Routing', 'Firewall policy', 'NAT'],
+    challenge: 'A service in a segmented environment could not reach an external destination through its expected upstream path, although an alternate provider path was working.',
+    approach: 'Separate the investigation into link health, route selection, policy-based routing where applicable, address translation, firewall rules, and return-path validation. Prefer a narrowly scoped change and verify it without disturbing unrelated services.',
+    outcome: 'A disciplined path to restoring the specific connectivity requirement while keeping the impact on other services in view.',
+    takeaway: 'When multiple internet paths exist, correct policy and return routing matter as much as link status.',
+    note: 'Generalised from operational troubleshooting. Provider details, host addresses, policies, and sensitive network identifiers are not included.'
+  },
+  {
+    number: '06', category: 'PUBLIC-SECTOR SYSTEMS', title: 'Supporting connectivity for a financial management platform',
+    summary: 'Network operations and troubleshooting for a public-sector platform that depends on reliable access between users and central services.',
+    tags: ['Enterprise networking', 'Service availability', 'Incident support', 'Coordination'],
+    challenge: 'Financial and administrative platforms depend on a stable network path between users, application services, and supporting infrastructure.',
+    approach: 'Approach faults from the service outward: establish the impact, validate network reachability, check routing and security boundaries, coordinate with the relevant technical teams, and record what has been tested.',
+    outcome: 'Practical network support aimed at restoring service access, narrowing the fault domain, and making incidents easier to communicate and follow up.',
+    takeaway: 'In business-critical systems, the network is part of the service experience—not just background infrastructure.',
+    note: 'Deliberately anonymised public-sector case study. Platform names, user information, internal architecture, operational schedules, and system identifiers are excluded.'
+  },
+  {
+    number: '07', category: 'EVENT & VENUE CONNECTIVITY', title: 'Helping prepare networks for busy event environments',
+    summary: 'Connectivity support for exhibition and stadium environments where many users and services rely on the network at the same time.',
+    tags: ['Venue networking', 'Switching', 'Connectivity checks', 'On-site support'],
+    challenge: 'Large event environments bring time-sensitive connectivity requirements, multiple service dependencies, and limited tolerance for unresolved issues during live operations.',
+    approach: 'Focus on the readiness basics: confirm intended connections, inspect link and device status, test reachability for the required services, and troubleshoot issues in coordination with the teams responsible for each component.',
+    outcome: 'A practical, service-focused approach to venue connectivity that prioritises readiness, clear fault isolation, and responsive support during operational windows.',
+    takeaway: 'For live events, testing the actual user and service path is more useful than assuming the network is ready because devices are powered on.',
+    note: 'Sanitised summary of event and venue connectivity work. Venue-specific designs, equipment locations, service identifiers, and security details are omitted.'
+  },
+  {
+    number: '08', category: 'DATA-CENTRE & APPLICATION HOSTING', title: 'Supporting network connectivity for enterprise applications',
+    summary: 'Network and infrastructure support around hosted business applications, including SAP-related services.',
+    tags: ['SAP hosting context', 'Data-centre networking', 'Routing', 'Service dependencies'],
+    challenge: 'Enterprise applications rely on several connected components, so an issue experienced by a user may originate in the network path, a security boundary, a host, or another dependency.',
+    approach: 'Help establish the affected service path, validate network reachability and policy, document findings, and coordinate with the teams responsible for the application and hosting layers.',
+    outcome: 'An infrastructure-focused contribution that keeps application connectivity, service dependencies, and cross-team troubleshooting visible.',
+    takeaway: 'Supporting an application means understanding the path it travels, while knowing where network responsibility ends and other teams take over.',
+    note: 'This is a network/infrastructure case study, not a claim of SAP functional configuration or completion of an SAP S/4HANA migration.'
+  },
+  {
+    number: '09', category: 'SOFTWARE & BUSINESS SYSTEMS', title: 'Simplifying everyday sales and stock work',
     summary: 'A point-of-sale prototype shaped around the practical needs of a small tuckshop and food business.',
     tags: ['POS workflow', 'Stock tracking', 'Product thinking'],
     challenge: 'Small operators need a simple way to record sales and understand stock usage without adding unnecessary complexity to a busy day.',
@@ -60,14 +100,14 @@ const projects = [
     note: 'Prototype case study. It does not claim production adoption, financial impact, or live customer deployment.'
   },
   {
-    number: '06', category: 'WEB DEVELOPMENT & UX', title: 'Making technical experience easier to understand',
+    number: '10', category: 'WEB DEVELOPMENT & UX', title: 'Making technical experience easier to understand',
     summary: 'A responsive portfolio experience that presents infrastructure work in clear language for recruiters and hiring teams.',
     tags: ['React', 'Vite', 'Responsive UI', 'UX writing'],
     challenge: 'Technical profiles can be difficult for non-specialist recruiters to scan when they rely too heavily on acronyms and tool lists.',
-    approach: 'Structure the experience around a welcoming introduction, plain-language project stories, capability groups, credentials, and clear contact actions.',
-    outcome: 'A mobile-friendly portfolio designed to help different audiences quickly understand the candidate’s range and find relevant evidence.',
+    approach: 'Build a responsive experience around a welcoming introduction, plain-language case studies, broader capability groups, education, and clear contact actions.',
+    outcome: 'A live, mobile-friendly portfolio designed to help different audiences understand the candidate’s range and find relevant evidence.',
     takeaway: 'Good interface design connects the information people need with the decision they are trying to make.',
-    note: 'Personal portfolio project. Technologies and project descriptions should be kept aligned with work actually completed.'
+    note: 'Personal portfolio project. Technologies and project descriptions should stay aligned with work actually completed.'
   }
 ]
 
@@ -165,7 +205,7 @@ function App() {
         <div className="approach-grid"><article className="approach-card"><span className="approach-symbol"><Compass size={22}/></span><span className="approach-kicker">01 — UNDERSTAND</span><h3>Start with the service</h3><p>Understand what is affected, who depends on it, and what a successful outcome should look like before changing anything.</p></article><article className="approach-card"><span className="approach-symbol"><Workflow size={22}/></span><span className="approach-kicker">02 — RESOLVE</span><h3>Work the problem methodically</h3><p>Follow the evidence across the network, security rules, and service path. Prefer precise, controlled changes over guesswork.</p></article><article className="approach-card"><span className="approach-symbol"><HeartHandshake size={22}/></span><span className="approach-kicker">03 — LEAVE IT CLEARER</span><h3>Validate and communicate</h3><p>Confirm the service works, document what changed, and make the next handover easier for the team.</p></article></div>
       </div></section>
 
-      <section className="projects-section section-pad" id="projects"><div className="section-wrap"><div className="section-heading"><div><span className="section-index">03 / SELECTED WORK</span><h2>Real problems.<br/><em>Practical responses.</em></h2></div><p className="section-intro">Examples across network and infrastructure operations, software workflows, and web experience. Each story starts with the problem and explains the thinking in plain language.</p></div>
+      <section className="projects-section section-pad" id="projects"><div className="section-wrap"><div className="section-heading"><div><span className="section-index">03 / SELECTED WORK</span><h2>Real problems.<br/><em>Practical responses.</em></h2></div><p className="section-intro">From branch and international connectivity to data-centre relocation, business-critical services, and software prototypes. Each story explains the challenge and engineering approach in plain language, while protecting sensitive operational details.</p></div>
         <div className="project-grid">{projects.map(p => <button className="project-card" key={p.number} onClick={() => setActiveProject(p)}><div className="project-card-top"><span className="project-number">{p.number}</span><span className="project-open" aria-hidden="true"><ArrowUpRight size={18}/></span></div><span className="project-category">{p.category}</span><h3>{p.title}</h3><p>{p.summary}</p><div className="tag-row">{p.tags.map(t => <span key={t}>{t}</span>)}</div><div className="project-card-bottom"><span>EXPLORE THE STORY</span><ChevronRight size={16}/></div></button>)}</div>
         <div className="confidential-note"><LockKeyhole size={18}/><p><strong>Professional discretion matters.</strong> These case studies intentionally omit internal addresses, production configurations, customer identifiers, credentials, and restricted diagrams.</p></div>
       </div></section>

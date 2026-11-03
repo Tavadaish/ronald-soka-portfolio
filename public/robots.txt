@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tavadaish.github.io/ronald-soka-portfolio/sitemap.xml
